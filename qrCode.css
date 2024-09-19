@@ -1,0 +1,43 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background: #262a2f;
+}
+.container{
+    width: 400px;
+    padding: 25px 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border-radius: 20px;
+    border: 2px solid black
+}
+p{
+    font-weight: 60%;
+    font-size: 17px;
+}
+input{
+    width: 100%;
+    margin-top: 5px;
+    border-radius: 5px;
+    height: 34px;
+}
+img{
+    margin-top: 20px;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+button{
+    margin-top: 15px;
+    width: 100%;
+    height: 30px;
+    background-color: blue;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 13px;
+}

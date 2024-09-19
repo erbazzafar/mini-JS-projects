@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>qrCode</title>
+    <link rel="stylesheet" href="qrCode.css">
+</head>
+<body>
+    <div class="container">
+        <p>Enter the Text or URL</p>
+        <input type="text" id="inp" placeholder="Text or URL">
+        <div class="imgDiv">
+            <img src="" id="qrImg">
+        </div>
+        <button id="qrBtn">Press to generate QR code </button>
+        <button id="changeMode" onclick=""> Press to change the Mode</button>
+    </div>
+
+    <script>
+        const url = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=";
+        let qrImg = document.querySelector("#qrImg");
+        let qrBtn = document.querySelector("#qrBtn");
+        let inp = document.querySelector("#inp");
+        let changeMode = document.querySelector("#changeMode");
+        
+        qrBtn.addEventListener("click", ()=>{
+            let inpData = inp.value;
+            if(inpData != ""){
+                qrImg.src = url + inp.value;
+                inp.value = "";
+            }else{
+                alert("Enter the Key, Text or URL in the INPUT field")
+            }
+        })
+
+        let curMode = "light";
+        changeMode.addEventListener('click', function () {
+        if (curMode === "light"){
+            curMode = "dark";
+            document.querySelector("p").style.color = "white";
+            document.querySelector(".container").style.backgroundColor = "#1c4744";    
+        }else{
+            curMode = "light";
+            document.querySelector(".container").style.backgroundColor = "#4aa860";
+        }
+
+    console.log(curMode);
+    
+});
+    </script>
+</body>
+</html>

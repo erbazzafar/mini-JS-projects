@@ -1,0 +1,166 @@
+/*
+//WEATHER
+.card{
+    background-color: beige;
+    border: 2px solid black;
+    text-align: center;
+    margin-top: 40px;
+    height: 50px;
+}
+
+.search{
+    border-radius: 20%;
+    align-items: center;
+    margin-bottom: auto;
+}
+
+.search button{
+    border-radius: 50%;
+    cursor: pointer;
+}
+.weather h1{
+    font-size: 40px;
+}
+    */
+
+/*
+// TO DO LIST    
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(100deg, yellow, purple);
+    padding: 10px;
+}
+
+.todo-app {
+    width: 70%;
+    max-width: 540px;
+    background: white;
+    margin: 120px auto 20px;
+    padding:40px 30px 70px;
+    border-radius: 20px;
+}
+
+.todo-app h2{
+    color: black;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.todo-app h2 img{
+    width: 60px;
+    margin-left: 10px;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgb(157, 152, 157) ; 
+    border-radius: 20px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-weight: 15px;
+}
+
+button{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: yellowgreen;
+    color: purple;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 8px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li ::before{
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    background-image: url(1.jpeg);
+}
+
+ul li.checked{
+    color: rgb(10, 10, 9);
+    text-decoration: line-through;
+}*/
+
+body{
+    background: #001e4d;
+}
+.app{
+    background: #fff;
+    width: 80%;
+    max-width: 600px;
+    margin: 100px auto 0;
+    border-radius: 10px;
+    padding: 30px;
+}
+.app h1{
+    font-size: 25px;
+    font-weight: 600;
+    color: black;
+    border-bottom: 2px solid;
+    padding-bottom: 10px;
+}
+
+.quiz{
+    padding: 20px 0;
+}
+.quiz h2{
+    font-size: 18px;
+    color:black;
+    font-weight: 600;
+}
+.btn{
+    font-weight: 500;
+    background: white;
+    color: #222;
+    width: 100%;
+    border: 1px solid;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 20%;
+    cursor: pointer;
+    transition: all 0.6s;
+}
+
+.btn:hover{
+    background: black;
+    color: white
+}
+#next-btn{
+    width: 10%;
+    height: 10%;
+    margin: 20px auto 0;
+    display : block;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+#next-btn:hover{
+    background: darkblue;
+    color: white;
+}

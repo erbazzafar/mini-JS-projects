@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="card">
+        <div class="search">
+            <input type="text" placeholder="Enter City name" spellcheck="false">
+            <button>Enter</button>
+        </div>
+
+        <div class="weather">
+            <h1 class="temp"> 36°C </h1>
+            <h2 class="city">Multan</h2>
+        </div>
+
+    </div>
+
+   <script>
+
+    const key = "16dcddf4ff832cbd50a129b2e2921d1a";
+    const url = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
+    const searchCity = document.querySelector(".search input");
+    const enterButton = document.querySelector(".search button");
+
+
+    async function checkWeather(City) {
+        const response = await fetch(url + City + `&appid=${key}`);
+        var data = await response.json();
+
+        console.log(data);
+
+        document.querySelector(".city").innerHTML = data.name;
+        document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°C";
+    }
+
+    enterButton.addEventListener("click", ()=>{
+        checkWeather(searchCity.value);
+    })
+searchCity = "";
+   </script> 
+
+</body>
+</html>

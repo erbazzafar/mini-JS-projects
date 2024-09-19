@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>Press to resolve the promise</button>
+
+    <script> 
+        let btn = document.querySelector("button");
+        
+        // Variable to hold the resolve function
+        let resolvePromise;
+
+        // Create the Promise and assign the resolve function to resolvePromise
+        let myPromise = new Promise((resolve, reject) => {
+            resolvePromise = reject; // Store the resolve function
+        });
+        
+        console.log(myPromise); // Logs the pending promise
+
+        btn.addEventListener("click", () => {
+            resolvePromise("promise resolved"); 
+            // Use the stored resolve function
+            console.log(myPromise);
+        });
+
+        myPromise.catch(result => {
+            console.log(result); // Log the resolved value
+        });
+
+    </script>
+</body>
+</html>

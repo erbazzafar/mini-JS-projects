@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="text-align: center"></body>
+    <span class="hours">1</span>
+    <span>:</span>
+    <span class="minutes">2</span>
+    <span>:</span>
+    <span class="seconds">3</span>
+    <span class="amOrpm"> AM </span>
+
+    <script>
+        let hoursElement = document.querySelector(".hours")
+        let minutesElement = document.querySelector(".minutes")
+        let secondsElement = document.querySelector(".seconds")
+        let amOrpm = document.querySelector(".amOrpm")
+
+        
+        function transition(){
+        const date = new Date();
+        // console.log(date.getHours());
+
+        hours = date.getHours();
+        minutes = date.getMinutes();
+        seconds = date.getSeconds();
+
+        if (hours > 12){
+            hours = hours -12;
+            amOrpm.innerHTML = "PM"
+        }else{
+            amOrpm.innerHTML = "AM"
+        }
+
+        
+        
+            hoursElement.innerHTML = hours;
+            minutesElement.innerHTML = minutes;
+            secondsElement.innerHTML = seconds;
+
+            requestAnimationFrame(transition);
+        }
+        requestAnimationFrame(transition);
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+div{
+    height: 80px;
+    width: 150px;
+    background-color: beige;
+    color: blueviolet;
+    margin-left: 20px;
+    margin-top: 20px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    transition: background-color 0.3s, color 0.3s;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.toggle-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #4a90e2, #9013fe);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-button:hover {
+    background: linear-gradient(45deg, #357abd, #7d3c9e);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.toggle-button:active {
+    background: linear-gradient(45deg, #2a69a3, #6d2c8e);
+    transform: scale(0.98);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-button:focus {
+    outline: none;
+}
