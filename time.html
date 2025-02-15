@@ -28,14 +28,12 @@
         minutes = date.getMinutes();
         seconds = date.getSeconds();
 
-        if (hours > 12){
+        if (hours > 12 && minutes > 0){
             hours = hours -12;
             amOrpm.innerHTML = "PM"
         }else{
             amOrpm.innerHTML = "AM"
-        }
-
-        
+        }        
         
             hoursElement.innerHTML = hours;
             minutesElement.innerHTML = minutes;
