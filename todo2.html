@@ -1,0 +1,31 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <input type="text" name="" id="todo" placeholder="Enter ToDo">
+        <button id="addTodo"> Add</button>
+        <br>
+        <ul id="list"></ul>
+
+        <script>
+            const inputBox = document.querySelector("#todo")
+            const addBtn = document.querySelector("#addTodo")
+            const listContainer = document.querySelector("#list")
+            addBtn.addEventListener("click", function() {
+                if(inputBox.value === ""){
+                    alert("Enter a ToDo !!")
+                } else {
+                    const liContent = document.createElement("li")
+                    liContent.textContent = inputBox.value;
+                    listContainer.appendChild (liContent)
+                    inputBox.value = "";
+                }
+
+            })
+        </script>
+    </body>
+    </html>
