@@ -24,4 +24,4 @@ function longestSubstring(str) {
     return { maxlen, longestSubstr };
 }
 
-console.log(longestSubstring("abcdbdefg")); 
+console.log(longestSubstring("abcdefghijklmnophhyz")); 

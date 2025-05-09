@@ -27,7 +27,8 @@
         qrBtn.addEventListener("click", ()=>{
             let inpData = inp.value;
             if(inpData != ""){
-                qrImg.src = url + inp.value;
+                // Encode the input data to handle special characters
+                qrImg.src = url + encodeURIComponent(inpData);
                 inp.value = "";
             }else{
                 alert("Enter the Key, Text or URL in the INPUT field")
