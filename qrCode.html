@@ -1,54 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>qrCode</title>
-    <link rel="stylesheet" href="qrCode.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="qrCode.css" />
 </head>
+
 <body>
     <div class="container">
-        <p>Enter the Text or URL</p>
-        <input type="text" id="inp" placeholder="Text or URL">
+        <h1 class="title">QR Code Generator</h1>
+        <p>Enter Text or URL below:</p>
+        <input type="text" id="inp" placeholder="e.g. https://example.com" />
+
         <div class="imgDiv">
-            <img src="" id="qrImg">
+            <img src="data:image/png;base64,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" id="qrImg" alt="Your QR Code will appear here" />
         </div>
-        <button id="qrBtn">Press to generate QR code </button>
-        <button id="changeMode" onclick=""> Press to change the Mode</button>
+
+        <button id="qrBtn">Generate QR Code</button>
+        <!-- <button id="changeMode">Toggle Light/Dark Mode</button> -->
     </div>
 
     <script>
-        const url = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=";
-        let qrImg = document.querySelector("#qrImg");
-        let qrBtn = document.querySelector("#qrBtn");
-        let inp = document.querySelector("#inp");
-        let changeMode = document.querySelector("#changeMode");
-        
-        qrBtn.addEventListener("click", ()=>{
-            let inpData = inp.value;
-            if(inpData != ""){
-                // Encode the input data to handle special characters
+        const url = "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=";
+        const qrImg = document.querySelector("#qrImg");
+        const qrBtn = document.querySelector("#qrBtn");
+        const inp = document.querySelector("#inp");
+        const changeMode = document.querySelector("#changeMode");
+
+        qrBtn.addEventListener("click", () => {
+            const inpData = inp.value.trim();
+            if (inpData !== "") {
                 qrImg.src = url + encodeURIComponent(inpData);
                 inp.value = "";
-            }else{
-                alert("Enter the Key, Text or URL in the INPUT field")
+            } else {
+                alert("Please enter text or a URL.");
             }
-        })
+        });
 
         let curMode = "light";
-        changeMode.addEventListener('click', function () {
-        if (curMode === "light"){
-            curMode = "dark";
-            document.querySelector("p").style.color = "white";
-            document.querySelector(".container").style.backgroundColor = "#1c4744";    
-        }else{
-            curMode = "light";
-            document.querySelector(".container").style.backgroundColor = "#4aa860";
-        }
+        changeMode.addEventListener("click", () => {
+            const container = document.querySelector(".container");
+            const title = document.querySelector(".title");
 
-    console.log(curMode);
-    
-});
+            if (curMode === "light") {
+                curMode = "dark";
+                container.classList.add("dark-mode");
+                title.classList.add("light-text");
+            } else {
+                curMode = "light";
+                container.classList.remove("dark-mode");
+                title.classList.remove("light-text");
+            }
+        });
     </script>
 </body>
+
 </html>

@@ -1,43 +1,84 @@
-*{
-    margin: 0px;
-    padding: 0px;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-body{
-    background: #262a2f;
+
+body {
+    background: linear-gradient(135deg, #262a2f, #111418);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.container{
+
+.container {
     width: 400px;
-    padding: 25px 25px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: white;
-    border-radius: 20px;
-    border: 2px solid black
+    padding: 30px 25px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: background 0.3s, color 0.3s;
 }
-p{
-    font-weight: 60%;
-    font-size: 17px;
-}
-input{
-    width: 100%;
-    margin-top: 5px;
-    border-radius: 5px;
-    height: 34px;
-}
-img{
-    margin-top: 20px;
-    margin-left: 25%;
-    margin-right: 25%;
-}
-button{
-    margin-top: 15px;
-    width: 100%;
-    height: 30px;
-    background-color: blue;
+
+.container.dark-mode {
+    background: #1c4744;
     color: #fff;
+}
+
+h1.title {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.title.light-text {
+    color: #fff;
+}
+
+p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: border 0.2s;
+}
+
+input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.imgDiv img {
+    display: block;
+    margin: 0 auto 15px auto;
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    margin-top: 10px;
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    border-radius: 8px;
     cursor: pointer;
-    border-radius: 13px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
 }
